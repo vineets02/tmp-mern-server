@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "panchayat",
+    "title": "Panchayat",
+    "description": "A comedy-drama capturing the journey of an engineering graduate who joins as a secretary of a Panchayat office in rural Uttar Pradesh.",
+    "genre": "Drama",
+    "tag": "original",
+    "thumbnail": "/thumbs/panchayat-hero.jpg",
+    "poster": "/thumbs/panchayat-poster.jpg",
+    "youtubeUrl": "https://www.youtube.com/watch?v=xyz001",
+    "awards": ["Asian Academy Creative Awards", "IFFI GOA", "IMDb Top 10", "Filmfare OTT"],
+    "cast": ["Jitendra Kumar", "Raghubir Yadav", "Neena Gupta", "Chandan Roy", "Faisal Malik"]
+  },
+  {
+    "slug": "kota-factory",
+    "title": "Kota Factory",
+    "description": "A black-and-white look at coaching culture in Kota.",
+    "genre": "Drama",
+    "tag": "original",
+    "thumbnail": "/thumbs/kota-hero.jpg",
+    "poster": "/thumbs/kota-poster.jpg",
+    "youtubeUrl": "https://www.youtube.com/watch?v=xyz234",
+    "awards": ["Asian Academy Creative Awards", "Filmfare OTT"],
+    "cast": ["Mayur More", "Jitendra Kumar", "Ranjan Raj", "Ahsaas Channa"]
+  },
+  {
+    "slug": "gullak",
+    "title": "Gullak",
+    "description": "Heartwarming tales of a middle-class family.",
+    "genre": "Family",
+    "tag": "original",
+    "thumbnail": "/thumbs/gullak-hero.jpg",
+    "poster": "/thumbs/gullak-poster.jpg",
+    "youtubeUrl": "https://www.youtube.com/watch?v=xyz345",
+    "awards": ["IAA Digital Awards", "Asian Academy Creative Awards"],
+    "cast": ["Jameel Khan", "Geetanjali Kulkarni", "Vaibhav Raj Gupta", "Harsh Mayar"]
+  },
+  {
+    "slug": "tripling",
+    "title": "Tripling",
+    "description": "Three siblings. One road-trip. Many memories.",
+    "genre": "Comedy",
+    "tag": "original",
+    "thumbnail": "/thumbs/tripling-hero.jpg",
+    "poster": "/thumbs/tripling-poster.jpg",
+    "youtubeUrl": "https://www.youtube.com/watch?v=xyz456",
+    "awards": ["Filmfare OTT"],
+    "cast": ["Sumeet Vyas", "Maanvi Gagroo", "Amol Parashar"]
+  }
+]
