@@ -48,6 +48,7 @@ import authRouter from './routes/auth.routes.js'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import contactRoutes from './routes/contact.routes.js'
+import { UPLOAD_DIR } from "./config/paths.js";
 
 dotenv.config()
 const app = express()
@@ -96,7 +97,11 @@ app.use('/api/auth', authRouter)
 app.use('/api/contact', contactRoutes)
 
 // Static (uploads). NOTE: Render disk is ephemeral unless you attach a “Disk”.
-app.use('/uploads', express.static(path.join(__dirname, '..', 'uploads')))
+// app.use('/uploads', express.static(path.join(__dirname, '..', 'uploads')))
+app.use(
+  "/uploads",
+  express.static(UPLOAD_DIR, { maxAge: "1d", index: false })
+);
 
 // 404
 app.use((req, res) => res.status(404).json({ error: 'Not found' }))
