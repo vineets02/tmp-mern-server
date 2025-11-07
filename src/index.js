@@ -48,7 +48,7 @@ import authRouter from './routes/auth.routes.js'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import contactRoutes from './routes/contact.routes.js'
-import { UPLOAD_DIR } from "./config/paths.js";
+import { UPLOAD_DIR,PUBLIC_UPLOAD_ROUTE  } from "./config/paths.js";
 
 dotenv.config()
 const app = express()
