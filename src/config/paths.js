@@ -8,7 +8,7 @@ const __dirname  = path.dirname(__filename);
 
 // Prefer env var; on Render set UPLOAD_DIR=/data/uploads (with a Disk attached).
 // Locally, this will default to project ./uploads
-const FALLBACK_DIR = path.join(__dirname, '..', '..', '/uploads');
+const FALLBACK_DIR = path.join(__dirname, '..', '..', 'uploads');
 const CANDIDATE = process.env.UPLOAD_DIR || FALLBACK_DIR;
 
 // ensure a directory exists *if we have permission*
