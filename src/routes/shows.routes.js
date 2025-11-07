@@ -259,18 +259,17 @@ function requireAdmin(req, res, next) {
 
 /* ---------- multer storage (uploads to shared UPLOAD_DIR) ---------- */
 const storage = multer.diskStorage({
-  destination: (_req, _file, cb) => {
-    fs.mkdirSync(UPLOAD_DIR, { recursive: true });
+  destination: function (_req, _file, cb) {
+    // UPLOAD_DIR is guaranteed to exist & be writable (or fell back)
     cb(null, UPLOAD_DIR);
   },
-  filename: (_req, file, cb) => {
-    const ext = path.extname(file.originalname);
-    const base = path
-      .basename(file.originalname, ext)
-      .replace(/[^a-z0-9]+/gi, "-")
+  filename: function (_req, file, cb) {
+    const ext  = path.extname(file.originalname);
+    const base = path.basename(file.originalname, ext)
+      .replace(/[^a-z0-9]+/gi, '-')
       .toLowerCase();
     cb(null, `${Date.now()}-${base}${ext}`);
-  },
+  }
 });
 const upload = multer({ storage });
 

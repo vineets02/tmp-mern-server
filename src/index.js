@@ -98,10 +98,12 @@ app.use('/api/contact', contactRoutes)
 
 // Static (uploads). NOTE: Render disk is ephemeral unless you attach a “Disk”.
 // app.use('/uploads', express.static(path.join(__dirname, '..', 'uploads')))
-app.use(
-  "/uploads",
-  express.static(UPLOAD_DIR, { maxAge: "1d", index: false })
-);
+app.use(PUBLIC_UPLOAD_ROUTE, express.static(UPLOAD_DIR, {
+  setHeaders: (res) => {
+    // small perf tweak for images
+    res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+  }
+}));
 
 // 404
 app.use((req, res) => res.status(404).json({ error: 'Not found' }))
